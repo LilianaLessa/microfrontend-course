@@ -1,1 +1,1 @@
-console.log('Container.js loaded');
+import('./bootstrap');

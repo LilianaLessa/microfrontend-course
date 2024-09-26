@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ModuleFederationPlugin = require('webpack/lib/ModuleFederationPlugin');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 module.exports = {
     mode: 'development',
@@ -14,8 +14,8 @@ module.exports = {
             name: 'products',
             filename: 'remoteEntry.js',
             exposes: {
-                './ProductsIndex': '.src/index' //todo continue from https://www.udemy.com/course/microfrontend-course/learn/lecture/23206832#overview
+                './ProductsIndex': './src/index'
             },
-        })
+        }),
     ],
 };
